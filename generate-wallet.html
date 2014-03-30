@@ -125,6 +125,13 @@ function setCryptoCurrency(toThis) {
         window.compressedWIFPrefix = 'T';
         document.title = 'Cypherfunk paper wallet generator'
         break;
+    case 'Hirocoin':
+    	window.networkVersion = 0x28;
+        window.privateKeyPrefix = 0xa8;
+        window.WIFPrefix = '6';
+        window.compressedWIFPrefix = 'T';
+        document.title = 'Hirocoin paper wallet generator'
+        break;
 	case 'Testnet':
 		window.networkVersion = 0x6F;
 		window.privateKeyPrefix = 0xEF;
@@ -161,6 +168,9 @@ switch (myDesign) {
 		break;
 	case 'alt-cypherfunk':
 		setCryptoCurrency('Cypherfunk');
+		break;
+	case 'alt-hirocoin':
+		setCryptoCurrency('Hirocoin');
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
@@ -10519,6 +10529,7 @@ Bitcoin.Util = {
                   		  <option value="alt-litecoin">Litecoin</option>
                   		  <option value="alt-dogecoin">Dogecoin</option>
                   		  <option value="alt-darkcoin">Darkcoin</option>
+                  		  <option value="alt-hirocoin">Hirocoin</option>
                   		  <option value="alt-cypherfunk">Cypherfunk</option>
                   		  <option value="alt-testnet">"Testnet"</option>
                         </select>
