@@ -132,6 +132,13 @@ function setCryptoCurrency(toThis) {
         window.compressedWIFPrefix = 'T';
         document.title = 'Hirocoin paper wallet generator'
         break;
+    case 'XC':
+    	window.networkVersion = 0x4b;
+        window.privateKeyPrefix = 0xcb;
+        window.WIFPrefix = '7';
+        window.compressedWIFPrefix = 'X';
+        document.title = 'XC paper wallet generator'
+        break;
 	case 'Testnet':
 		window.networkVersion = 0x6F;
 		window.privateKeyPrefix = 0xEF;
@@ -171,6 +178,9 @@ switch (myDesign) {
 		break;
 	case 'alt-hirocoin':
 		setCryptoCurrency('Hirocoin');
+		break;
+	case 'alt-xc':
+		setCryptoCurrency('XC');
 		break;
 	case 'alt-testnet':
 		setCryptoCurrency('Testnet');
@@ -10530,6 +10540,7 @@ Bitcoin.Util = {
                   		  <option value="alt-dogecoin">Dogecoin</option>
                   		  <option value="alt-darkcoin">Darkcoin</option>
                   		  <option value="alt-hirocoin">Hirocoin</option>
+                  		  <option value="alt-xc">XC</option>
                   		  <option value="alt-cypherfunk">Cypherfunk</option>
                   		  <option value="alt-testnet">"Testnet"</option>
                         </select>
